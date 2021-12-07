@@ -10,7 +10,7 @@ function test(states){
        var state = states[0] == "A" ? states[1] : states[2];
        var action_result = reflex_agent(location, state);
        actualEstado[estado-1] = true 
-       document.getElementById("log").innerHTML+=`<br><strong>Estado: ${estado}  A: ${states[1]} B: ${states[2]} </strong><br>Location: `.concat(location).concat(" | Action: ").concat(action_result);
+       document.getElementById("log").innerHTML+=`<br>Estado: ${estado}  A: ${states[1]} B: ${states[2]}<br>Location: `.concat(location).concat(" | Action: ").concat(action_result);
        if (action_result == "CLEAN"){
         if (location == "A")  states[1] = "CLEAN";
         else if (location == "B") states[2] = "CLEAN"
